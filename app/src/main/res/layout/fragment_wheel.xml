@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background03"
+    android:layout_height="match_parent">
+
+    <com.wheel.game.core.library.CustomImageButton
+        android:id="@+id/meuButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/home"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/balance"
+        style="@style/BasicText"
+        android:textColor="#B34005"
+        tools:text="1500"
+        android:paddingStart="15dp"
+        android:paddingBottom="4dp"
+        android:layout_width="115dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/balance"
+        app:layout_constraintBottom_toBottomOf="@+id/meuButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/meuButton" />
+
+    <ImageView
+        android:id="@+id/wheel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintDimensionRatio="1"
+        android:src="@drawable/wheel"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meuButton" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:src="@drawable/wheel02"
+        android:layout_marginStart="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/wheel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/wheel" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/wheel01"
+        app:layout_constraintBottom_toBottomOf="@+id/wheel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/wheel" />
+
+    <com.wheel.game.core.library.CustomImageButton
+        android:id="@+id/spinButton"
+        android:layout_width="260dp"
+        android:layout_height="80dp"
+        android:src="@drawable/spin"
+        app:layout_constraintBottom_toBottomOf="@+id/wheel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/wheel" />
+
+    <com.wheel.game.core.library.CustomImageButton
+        android:id="@+id/collectButton"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:src="@drawable/collect"
+        android:layout_marginTop="-40dp"
+        app:layout_constraintEnd_toEndOf="@+id/wheel"
+        app:layout_constraintStart_toStartOf="@+id/wheel"
+        app:layout_constraintTop_toBottomOf="@+id/wheel" />
+
+    <LinearLayout
+        android:id="@+id/cardsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wheel">
+
+        <ImageView
+            android:id="@+id/redCard"
+            android:src="@drawable/red"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="125dp"
+            android:layout_height="170dp"/>
+
+        <ImageView
+            android:id="@+id/grayCard"
+            android:src="@drawable/black"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="125dp"
+            android:layout_height="170dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

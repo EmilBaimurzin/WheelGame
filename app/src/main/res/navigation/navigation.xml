@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.wheel.game.ui.main_menu.FragmentMainMenu"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentWheel"
+            app:destination="@id/fragmentWheel" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentWheel"
+        android:name="com.wheel.game.ui.wheel.FragmentWheel"
+        android:label="FragmentWheel" >
+        <action
+            android:id="@+id/action_fragmentWheel_to_dialogFinishes"
+            app:destination="@id/dialogFinishes" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogFinishes"
+        android:name="com.wheel.game.ui.dialogs.DialogFinishes"
+        android:label="DialogFinishes" >
+        <argument
+            android:name="money"
+            app:argType="integer" />
+    </dialog>
+</navigation>

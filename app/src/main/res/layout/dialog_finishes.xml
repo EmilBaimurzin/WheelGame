@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+   <FrameLayout
+       android:id="@+id/container"
+       android:layout_width="300dp"
+       android:layout_height="200dp"
+       android:layout_marginBottom="15dp"
+       android:background="@drawable/victory">
+
+       <TextView
+           android:id="@+id/money"
+           style="@style/BasicText"
+           android:textColor="#B34005"
+           tools:text="1500"
+           android:scaleX="1.2"
+           android:layout_marginTop="10dp"
+           android:scaleY="1.2"
+           android:paddingStart="15dp"
+           android:paddingBottom="4dp"
+           android:layout_gravity="center"
+           android:layout_width="115dp"
+           android:layout_height="30dp"
+           android:background="@drawable/balance" />
+
+   </FrameLayout>
+
+    <com.wheel.game.core.library.CustomImageButton
+        android:id="@+id/buttonNext"
+        android:layout_width="120dp"
+        android:layout_gravity="bottom|center"
+        android:layout_height="50dp"
+        android:src="@drawable/next"/>
+
+    <com.wheel.game.core.library.CustomImageButton
+        android:id="@+id/buttonClose"
+        android:layout_gravity="end"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/close"/>
+
+</FrameLayout>
